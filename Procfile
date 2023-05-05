@@ -1,2 +1,2 @@
-web: gunicorn mfmcm.wsgi
+web: gunicorn mfmcf.wsgi
 release: python manage.py migrate --noinput
