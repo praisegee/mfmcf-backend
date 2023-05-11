@@ -66,3 +66,18 @@ class SpotLight(models.Model):
 
     class Meta:
         ordering = ("-created_at",)
+
+
+class Executive(models.Model):
+    fullname = models.CharField(_("Full name"), max_length=100)
+    campus = models.CharField(_("Campus"), max_length=10, choices=CAMPUS, default="Oye")
+    position = models.CharField(_("Position"), max_length=50, help_text="Office post")
+    picture = models.ImageField(_("Picture"))
+    facebook = models.URLField(_("Facebook profile link"))
+    twitter = models.URLField(_("Twitter profile link"))
+    linked_in = models.URLField(_("LinkedIn profile link"))
+    instagram = models.URLField(_("Instagram profile link"))
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.fullname

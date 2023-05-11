@@ -8,6 +8,7 @@ router.register(
     "birthday-celebrants", views.BirthdatCelebrantAPI, basename="birthday_celebrants"
 )
 router.register("sportlight", views.SpotLightAPI, basename="spotlight")
+router.register("executives", views.ExecutiveAPI, basename="spotexecutiveslight")
 
 
 urlpatterns = [

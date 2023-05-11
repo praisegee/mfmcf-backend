@@ -13,3 +13,9 @@ class SpotLightSerializer(serializers.ModelSerializer):
     class Meta:
         model = m.SpotLight
         fields = "__all__"
+
+
+class ExecutiveSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = m.Executive
+        fields = "__all__"
